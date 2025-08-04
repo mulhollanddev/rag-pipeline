@@ -27,7 +27,7 @@ def ingest(pdf_path, persist_directory="./sql_chroma_db"):
 
 # Cria a RAG chain
 def rag_chain(persist_directory="./sql_chroma_db"):
-    model = ChatOllama(model="llama3")
+    model = ChatOllama(model="llama3:instruct")
 
     prompt = PromptTemplate.from_template(
         '''
